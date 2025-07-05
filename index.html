@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>БлагоМед - Медицинский центр в Подольске</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/logo.svg" alt="БлагоМед" class="logo" style="height:73px;width:auto;">
+                <span class="brand-text brand-nowrap" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span style="white-space:nowrap; font-size:2.1rem; font-weight:700; line-height:1;">
+                        <span class="brand-main">Благо</span><span class="brand-accent">Мед</span>
+                    </span>
+                    <span class="brand-desc" style="font-size:1.1rem; font-weight:400; color:#555;">Медецина во благо</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Врачи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tests.html">Анализы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discounts.html">Акции</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <button class="btn btn-primary btn-appointment" onclick="openContactModal()">
+                        <i class="fas fa-calendar-plus me-2"></i>Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">Ваш надежный партнер в заботе о здоровье!</h1>
+                    <p class="hero-subtitle">Современная диагностика, квалифицированные врачи и индивидуальный подход к каждому пациенту</p>
+                    <div class="hero-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-phone text-primary me-2"></i>
+                            <span>+7 (977) 751-50-05</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i>
+                            <span>г. Подольск, ул. Генерала Смирнова, д. 16</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg me-3" onclick="openContactModal()">
+                            <i class="fas fa-calendar-plus me-2"></i>Записаться на прием
+                        </button>
+                        <a href="#about" class="btn btn-outline-primary btn-lg">
+                            <i class="fas fa-info-circle me-2"></i>Узнать больше
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-image">
+                        <img src="images/Логотип1.jpg" alt="Медицинский центр" class="img-fluid rounded-4 shadow-lg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <img src="images/Логотип1.jpg" alt="О нас" class="img-fluid rounded-4 shadow">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h2 class="section-title">О медицинском центре БлагоМед</h2>
+                    <p class="text-muted mb-4">Мы понимаем, насколько важно иметь медицинский центр рядом с домом, где Вам окажут квалифицированную помощь и поддержку.</p>
+                    <div class="feature-list">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <span>Полный спектр медицинских услуг</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <span>Современная диагностика и УЗИ</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <span>Опытные врачи-специалисты</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle text-primary me-3"></i>
+                            <span>Доступные цены</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview -->
+    <section class="services-preview py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Наши услуги</h2>
+                <p class="text-muted">Комплексный подход к вашему здоровью</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <h5>Терапия</h5>
+                        <p>Общая терапия и профилактика заболеваний</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-microscope"></i>
+                        </div>
+                        <h5>Лабораторная диагностика</h5>
+                        <p>Полный спектр анализов и исследований</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-heartbeat"></i>
+                        </div>
+                        <h5>УЗИ диагностика</h5>
+                        <p>Современное ультразвуковое исследование</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h5>Специалисты</h5>
+                        <p>Консультации узких специалистов</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-list me-2"></i>Все услуги
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Наша клиника</h2>
+                <p class="text-muted">Современное оборудование и комфортная атмосфера</p>
+            </div>
+            <div class="gallery-carousel" data-aos="fade-up">
+                <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <div class="carousel-item active">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <img src="images/photo_1_2025-02-27_18-21-20.jpg" alt="Кабинет врача" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_2_2025-02-27_18-21-20.jpg" alt="Зона ожидания" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_3_2025-02-27_18-21-20.jpg" alt="Процедурный кабинет" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <img src="images/photo_4_2025-02-27_18-21-20.jpg" alt="Ресепшн" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_5_2025-02-27_18-21-20.jpg" alt="Оборудование" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_6_2025-02-27_18-21-20.jpg" alt="Зона отдыха" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row g-3">
+                                <div class="col-md-4">
+                                    <img src="images/photo_7_2025-02-27_18-21-20.jpg" alt="Вход в клинику" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_9_2025-02-27_18-21-20.jpg" alt="Рабочие моменты" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                                <div class="col-md-4">
+                                    <img src="images/photo_4_2025-02-27_18-21-20.jpg" alt="Ресепшн" class="img-fluid rounded-3 gallery-img" onclick="openImageModal(this.src)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tests Section -->
+    <section class="tests-section py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h2 class="section-title">🔬 Забота о вашем здоровье – наш приоритет!</h2>
+                    <p class="mb-4">Медицинский центр <strong class="text-primary">Благо</strong><strong class="text-danger">Мед</strong> сотрудничает с ведущей лабораторией <strong>МобилМед</strong></p>
+                    <div class="benefits-list">
+                        <div class="benefit-item">
+                            <i class="fas fa-flask text-primary me-3"></i>
+                            <div>
+                                <h6>Комплексный подход</h6>
+                                <p class="mb-0 text-muted">Исследования для выявления нарушений в работе всех систем организма</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-search text-primary me-3"></i>
+                            <div>
+                                <h6>Широкий спектр</h6>
+                                <p class="mb-0 text-muted">Поиск причин заболеваний, включая инфекции и аллергены</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-chart-line text-primary me-3"></i>
+                            <div>
+                                <h6>Полная картина</h6>
+                                <p class="mb-0 text-muted">Оценка уровня гормонов, белков и микроэлементов</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="tests.html" class="btn btn-primary btn-lg mt-4">
+                        <i class="fas fa-vial me-2"></i>Все анализы
+                    </a>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="images/Логотип1.jpg" alt="Лабораторные исследования" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Мы в социальных сетях</h2>
+                <p class="text-muted">Подписывайтесь на наши аккаунты, следите за выгодными предложениями</p>
+            </div>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="social-card telegram-card">
+                        <div class="social-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <h5>Telegram</h5>
+                        <p>Получайте уведомления о новых акциях и записывайтесь на прием</p>
+                        <a href="#" class="btn btn-outline-light">Подписаться</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="social-card instagram-card">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h5>Instagram</h5>
+                        <p>Смотрите фото нашей клиники и читайте полезные советы врачей</p>
+                        <a href="#" class="btn btn-outline-light">Подписаться</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Местоположение клиники</h2>
+                <p class="text-muted">Удобное расположение в центре Подольска</p>
+            </div>
+            <div class="map-container" data-aos="fade-up">
+                <iframe 
+                    src="https://yandex.ru/map-widget/v1/?display-text=БлагоМед&ll=37.482313%2C55.414685&mode=search&poi%5Bpoint%5D=37.482362%2C55.414705&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D48994109948&z=16" 
+                    width="100%" 
+                    height="400" 
+                    frameborder="0" 
+                    allowfullscreen="true" 
+                    class="rounded-3 shadow">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="images/logo.svg" alt="БлагоМед" class="logo mb-3" style="height: 100px;">
+                    <p class="text-muted">Ваш надежный партнер в заботе о здоровье. Современная медицина с индивидуальным подходом.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="footer-title">Навигация</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="doctors.html">Врачи</a></li>
+                        <li><a href="tests.html">Анализы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="footer-title">Контакты</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone me-2"></i>
+                            <span>+7 (977) 751-50-05</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone me-2"></i>
+                            <span>+7 (495) 751-50-05</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>blagomed-podolsk@yandex.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>г. Подольск, ул. Генерала Смирнова, д. 16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="footer-title">Режим работы</h6>
+                    <div class="working-hours">
+                        <div class="working-item">
+                            <span>Пн-Пт:</span>
+                            <span>8:00 - 20:00</span>
+                        </div>
+                        <div class="working-item">
+                            <span>Сб:</span>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                        <div class="working-item">
+                            <span>Вс:</span>
+                            <span>9:00 - 16:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2025 ООО «МФЧМЦ БЛАГОМЕД». Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-muted">ИНН: 5036178558 | ОГРН: 1195081095087 | Лицензия: Л041-О1162-50/00652485</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Записаться на прием</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-4">Выберите удобный способ связи:</p>
+                    <div class="d-grid gap-3">
+                        <a href="https://wa.me/79777515005" class="btn btn-success btn-lg" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                        <a href="tel:+79777515005" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone me-2"></i>Позвонить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="/placeholder.svg" alt="" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

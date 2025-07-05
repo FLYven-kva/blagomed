@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - БлагоМед</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/logo.svg" alt="БлагоМед" class="logo" style="height:73px;width:auto;">
+                <span class="brand-text brand-nowrap" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span style="white-space:nowrap; font-size:2.1rem; font-weight:700; line-height:1;">
+                        <span class="brand-main">Благо</span><span class="brand-accent">Мед</span>
+                    </span>
+                    <span class="brand-desc" style="font-size:1.1rem; font-weight:400; color:#555;">Медецина во благо</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="doctors.html">Врачи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tests.html">Анализы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discounts.html">Акции</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <button class="btn btn-primary btn-appointment" onclick="openContactModal()">
+                        <i class="fas fa-calendar-plus me-2"></i>Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero" style="padding-top: 160px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="hero-title" data-aos="fade-up">Контакты</h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Свяжитесь с нами удобным способом</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Info Section -->
+    <section class="contact-info-section py-5 position-relative" style="overflow:hidden;">
+        <div class="container position-relative" style="z-index:1;">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-4 d-flex" data-aos="fade-up">
+                    <div class="contact-card-modern flex-fill h-100 d-flex flex-column justify-content-between shadow-lg border-0 fade-in-up">
+                        <div>
+                            <div class="contact-icon mb-3" style="background:linear-gradient(135deg,#ef3b1f 0%,#ff6b47 100%);color:#fff;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Телефоны</h4>
+                            <div class="contact-details">
+                                <p><strong>Основной:</strong> <a href="tel:+79777515005">+7 (977) 751-50-05</a></p>
+                                <p><strong>Дополнительный:</strong> <a href="tel:+74957515005">+7 (495) 751-50-05</a></p>
+                                <p class="text-muted">Единый контактный центр</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card-modern flex-fill h-100 d-flex flex-column justify-content-between shadow-lg border-0 fade-in-up">
+                        <div>
+                            <div class="contact-icon mb-3" style="background:linear-gradient(135deg,#143a7b 0%,#5a7be3 100%);color:#fff;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Адрес</h4>
+                            <div class="contact-details">
+                                <p>142118, Московская область</p>
+                                <p>г. Подольск, ул. Генерала Смирнова, д. 16, помещение 1</p>
+                                <p class="text-muted">Удобное расположение в центре города</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-flex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card-modern flex-fill h-100 d-flex flex-column justify-content-between shadow-lg border-0 fade-in-up">
+                        <div>
+                            <div class="contact-icon mb-3" style="background:linear-gradient(135deg,#d1059f 0%,#ef3b1f 100%);color:#fff;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h4 class="fw-bold mb-3">Email</h4>
+                            <div class="contact-details">
+                                <p><a href="mailto:blagomed-podolsk@yandex.ru">blagomed-podolsk@yandex.ru</a></p>
+                                <p class="text-muted">Обратная связь и вопросы</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours -->
+    <section class="working-hours-section py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Режим работы</h2>
+                <p class="text-muted">Мы работаем для вашего удобства</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="schedule-card-modern fade-in-up" data-aos="fade-up">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="contact-icon me-3" style="background:linear-gradient(135deg,#ef3b1f 0%,#5a7be3 100%);color:#fff;">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h4 class="mb-0 fw-bold">График работы</h4>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center align-middle mb-0">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>День недели</th>
+                                        <th>Время работы</th>
+                                        <th>Статус</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Понедельник</td>
+                                        <td>8:00 - 20:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вторник</td>
+                                        <td>8:00 - 20:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Среда</td>
+                                        <td>8:00 - 20:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Четверг</td>
+                                        <td>8:00 - 20:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Пятница</td>
+                                        <td>8:00 - 20:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суббота</td>
+                                        <td>9:00 - 18:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Воскресенье</td>
+                                        <td>9:00 - 16:00</td>
+                                        <td><span class="schedule-status active">Работаем</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact -->
+    <section class="quick-contact py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Быстрая связь</h2>
+                <p class="text-muted">Выберите удобный способ связи с нами</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                    <a href="https://wa.me/79777515005" class="quick-contact-card-modern whatsapp fade-in-up" target="_blank">
+                        <div class="quick-contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h5>WhatsApp</h5>
+                        <p>Быстрые сообщения и запись на прием</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <a href="tel:+79777515005" class="quick-contact-card-modern phone fade-in-up">
+                        <div class="quick-contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h5>Звонок</h5>
+                        <p>Прямая связь с администратором</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#" class="quick-contact-card-modern telegram fade-in-up">
+                        <div class="quick-contact-icon">
+                            <i class="fab fa-telegram-plane"></i>
+                        </div>
+                        <h5>Telegram</h5>
+                        <p>Новости и акции клиники</p>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <a href="#" class="quick-contact-card-modern instagram fade-in-up">
+                        <div class="quick-contact-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h5>Instagram</h5>
+                        <p>Фото клиники и полезные советы</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Info -->
+    <section class="company-info py-5">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="section-title">Реквизиты организации</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="company-card-modern fade-in-up" data-aos="fade-up">
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="company-item">
+                                    <strong>Наименование:</strong>
+                                    <p>ООО «МФЧМЦ БЛАГОМЕД»</p>
+                                </div>
+                                <div class="company-item">
+                                    <strong>ИНН:</strong>
+                                    <p>5036178558</p>
+                                </div>
+                                <div class="company-item">
+                                    <strong>ОГРН:</strong>
+                                    <p>1195081095087</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="company-item">
+                                    <strong>Лицензия:</strong>
+                                    <p>Л041-О1162-50/00652485</p>
+                                </div>
+                                <div class="company-item">
+                                    <strong>Сайт:</strong>
+                                    <p><a href="index.html">blagomed-podolsk.ru</a></p>
+                                </div>
+                                <div class="company-item">
+                                    <strong>Email:</strong>
+                                    <p><a href="mailto:blagomed-podolsk@yandex.ru">blagomed-podolsk@yandex.ru</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2023 БлагоМед. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Запись на прием</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="appointmentForm">
+                        <div class="mb-3">
+                            <label for="patientName" class="form-label">ФИО пациента</label>
+                            <input type="text" class="form-control" id="patientName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientPhone" class="form-label">Телефон</label>
+                            <input type="tel" class="form-control" id="patientPhone" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="doctorSelect" class="form-label">Выберите врача</label>
+                            <select class="form-select" id="doctorSelect" required>
+                                <option value="">-- Выберите врача --</option>
+                                <option value="1">Доктор 1</option>
+                                <option value="2">Доктор 2</option>
+                                <option value="3">Доктор 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="serviceSelect" class="form-label">Выберите услугу</label>
+                            <select class="form-select" id="serviceSelect" required>
+                                <option value="">-- Выберите услугу --</option>
+                                <option value="1">Услуга 1</option>
+                                <option value="2">Услуга 2</option>
+                                <option value="3">Услуга 3</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="appointmentDate" class="form-label">Дата и время</label>
+                            <input type="datetime-local" class="form-control" id="appointmentDate" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="patientMessage" class="form-label">Дополнительная информация</label>
+                            <textarea class="form-control" id="patientMessage" rows="3"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Записаться на прием</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG Defs for Gradients (Hidden) -->
+    <svg width="0" height="0" style="position:absolute;">
+      <defs>
+        <linearGradient id="phone-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ef3b1f"/>
+          <stop offset="100%" stop-color="#ff6b47"/>
+        </linearGradient>
+        <linearGradient id="map-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#143a7b"/>
+          <stop offset="100%" stop-color="#5a7be3"/>
+        </linearGradient>
+        <linearGradient id="mail-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#d1059f"/>
+          <stop offset="100%" stop-color="#ef3b1f"/>
+        </linearGradient>
+        <linearGradient id="clock-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#ef3b1f"/>
+          <stop offset="100%" stop-color="#5a7be3"/>
+        </linearGradient>
+        <linearGradient id="wa-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#25d366"/>
+          <stop offset="100%" stop-color="#128c7e"/>
+        </linearGradient>
+        <linearGradient id="tg-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#0088cc"/>
+          <stop offset="100%" stop-color="#1da1f2"/>
+        </linearGradient>
+        <linearGradient id="ig-gradient" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#fd5c63"/>
+          <stop offset="50%" stop-color="#fcae1e"/>
+          <stop offset="100%" stop-color="#a72879"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

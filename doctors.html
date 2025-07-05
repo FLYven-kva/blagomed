@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Врачи - БлагоМед</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="images/logo.svg" alt="БлагоМед" class="logo" style="height:73px;width:auto;">
+                <span class="brand-text brand-nowrap" style="display: flex; flex-direction: column; align-items: flex-start;">
+                    <span style="white-space:nowrap; font-size:2.1rem; font-weight:700; line-height:1;">
+                        <span class="brand-main">Благо</span><span class="brand-accent">Мед</span>
+                    </span>
+                    <span class="brand-desc" style="font-size:1.1rem; font-weight:400; color:#555;">Медецина во благо</span>
+                </span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="doctors.html">Врачи</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tests.html">Анализы</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discounts.html">Акции</a>
+                    </li>
+                </ul>
+                <div class="ms-3">
+                    <button class="btn btn-primary btn-appointment" onclick="openContactModal()">
+                        <i class="fas fa-calendar-plus me-2"></i>Записаться
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="page-hero" style="padding-top: 160px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="hero-title" data-aos="fade-up">Наши врачи</h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100">Опытные специалисты с высшим медицинским образованием</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title animate__animated animate__fadeInDown">Врачи клиники <span style="color: rgb(5, 5, 145);">Благо</span><span style="color: rgb(211, 5, 5);">Мед</span></h2>
+            <div class="row g-4">
+                <!-- Doctor 1 -->
+                <div class="col-md-6">
+                    <div class="doctor-card-modern shadow-lg animate__animated animate__fadeInUp">
+                        <div class="doctor-photo-wrap">
+                            <img src="images/photo_11_2025-02-27_18-21-20.jpg" alt="Исаева Ирина Владимировна" class="img-fluid doctor-photo">
+                        </div>
+                        <div class="doctor-info-modern">
+                            <h4 class="doctor-name">Исаева Ирина Владимировна</h4>
+                            <div class="doctor-specialty">Акушер-гинеколог, УЗД</div>
+                            <div class="doctor-experience">Стаж: 11 лет</div>
+                            <div class="doctor-description">
+                                <b>С чем вы можете ко мне обратиться:</b>
+                                <ul class="doctor-list">
+                                    <li>Воспалительные заболевания органов малого таза, инфекции передающиеся половым путем, миома матки, образования придатков, гиперпластические процессы эндометрия, патологии шейки матки</li>
+                                    <li>Индивидуальный подбор контрацепции и менопаузальной гормонотерапии</li>
+                                </ul>
+                                <b>Образование:</b>
+                                <ul class="doctor-list">
+                                    <li>2014г МГМСУ Евдокимова, лечебное дело</li>
+                                    <li>2015г МГМСУ Евдокимова, акушерство и гинекология</li>
+                                    <li>Повышение квалификации: Репродуктивная гинекология, ГБУЗ МО МОНИКИ им. М.Ф. Владимирского</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctor 2 -->
+                <div class="col-md-6">
+                    <div class="doctor-card-modern shadow-lg animate__animated animate__fadeInUp animate__delay-1s">
+                        <div class="doctor-photo-wrap">
+                            <img src="images/photo_13_2025-02-27_18-21-20.jpg" alt="Корнеев Кирилл Викторович" class="img-fluid doctor-photo">
+                        </div>
+                        <div class="doctor-info-modern">
+                            <h4 class="doctor-name">Корнеев Кирилл Викторович</h4>
+                            <div class="doctor-specialty">Онколог, маммолог, УЗИ молочных желез</div>
+                            <div class="doctor-experience">Стаж: 15 лет, к.м.н.</div>
+                            <div class="doctor-description">
+                                <b>С чем вы можете ко мне обратиться:</b>
+                                <ul class="doctor-list">
+                                    <li>Злокачественные новообразования кожи, мягких тканей, щитовидной и молочной железы</li>
+                                    <li>Биопсии, дерматоскопия</li>
+                                    <li>Лактационные маститы, лактостаз, выделения из сосков</li>
+                                </ul>
+                                <b>Образование:</b>
+                                <ul class="doctor-list">
+                                    <li>2009г Медицинский институт Орловского госуниверситета, лечебное дело</li>
+                                    <li>2011г РНЦ рентгенорадиологии, хирургия, маммология</li>
+                                    <li>2011г РНЦ рентгенорадиологии, к.м.н.</li>
+                                    <li>2014г Курский ГМУ, онкология</li>
+                                    <li>2017г РУДН, клиническая и эстетическая маммология</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctor 3 -->
+                <div class="col-md-6">
+                    <div class="doctor-card-modern shadow-lg animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="doctor-photo-wrap">
+                            <img src="images/photo_14_2025-02-27_18-21-20.jpg" alt="Пешков Дмитрий Сергеевич" class="img-fluid doctor-photo">
+                        </div>
+                        <div class="doctor-info-modern">
+                            <h4 class="doctor-name">Пешков Дмитрий Сергеевич</h4>
+                            <div class="doctor-specialty">Главный врач, Уролог, андролог, УЗД</div>
+                            <div class="doctor-experience">Стаж: 13 лет</div>
+                            <div class="doctor-description">
+                                <b>С чем вы можете ко мне обратиться:</b>
+                                <ul class="doctor-list">
+                                    <li>Диагностика и лечение хронических воспалительных процессов мочевой системы</li>
+                                    <li>Лечение мочекаменной болезни, нарушений эректильной функции и эякуляции</li>
+                                    <li>Профилактика после случайных половых связей (у мужчин)</li>
+                                    <li>Лечение ИППП, УЗ диагностика</li>
+                                </ul>
+                                <b>Образование:</b>
+                                <ul class="doctor-list">
+                                    <li>2011г Смоленская ГМА, лечебное дело</li>
+                                    <li>2012г Смоленская ГМА, хирургия</li>
+                                    <li>2014г Смоленская ГМА, урология</li>
+                                    <li>2015г ГБУЗ МО МОНИКИ, УЗ диагностика</li>
+                                    <li>2017г РУДН, клиническая андрология</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Doctor 4 -->
+                <div class="col-md-6">
+                    <div class="doctor-card-modern shadow-lg animate__animated animate__fadeInUp animate__delay-3s">
+                        <div class="doctor-photo-wrap">
+                            <img src="images/photo_15_2025-02-27_18-21-20.jpg" alt="Зайцева Ольга Анатольевна" class="img-fluid doctor-photo">
+                        </div>
+                        <div class="doctor-info-modern">
+                            <h4 class="doctor-name">Зайцева Ольга Анатольевна</h4>
+                            <div class="doctor-specialty">Невролог, рефлексотерапевт</div>
+                            <div class="doctor-experience">Стаж: 19 лет</div>
+                            <div class="doctor-description">
+                                <b>С чем вы можете ко мне обратиться:</b>
+                                <ul class="doctor-list">
+                                    <li>Эпилепсия, головные боли, мигрени, неврозы</li>
+                                    <li>Нервно-мышечные патологии, остеохондроз, блокады, иглорефлексотерапия</li>
+                                </ul>
+                                <b>Образование:</b>
+                                <ul class="doctor-list">
+                                    <li>2006г Оренбургский ГМУ, лечебное дело</li>
+                                    <li>2007г Оренбургский ГМУ, неврология</li>
+                                    <li>2015г Оренбургский ГМУ, рефлексотерапия</li>
+                                    <li>Повышение квалификации: УВТ, мануальное тестирование и блокады</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <img src="/placeholder.svg?height=50&width=150" alt="БлагоМед" class="logo mb-3">
+                    <p class="text-muted">Ваш надежный партнер в заботе о здоровье. Современная медицина с индивидуальным подходом.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-telegram-plane"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2">
+                    <h6 class="footer-title">Навигация</h6>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="services.html">Услуги</a></li>
+                        <li><a href="doctors.html">Врачи</a></li>
+                        <li><a href="tests.html">Анализы</a></li>
+                        <li><a href="contacts.html">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="footer-title">Контакты</h6>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone me-2"></i>
+                            <span>+7 (977) 751-50-05</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone me-2"></i>
+                            <span>+7 (495) 751-50-05</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope me-2"></i>
+                            <span>blagomed-podolsk@yandex.ru</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <span>г. Подольск, ул. Генерала Смирнова, д. 16</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <h6 class="footer-title">Режим работы</h6>
+                    <div class="working-hours">
+                        <div class="working-item">
+                            <span>Пн-Пт:</span>
+                            <span>8:00 - 20:00</span>
+                        </div>
+                        <div class="working-item">
+                            <span>Сб:</span>
+                            <span>9:00 - 18:00</span>
+                        </div>
+                        <div class="working-item">
+                            <span>Вс:</span>
+                            <span>9:00 - 16:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 text-muted">&copy; 2025 ООО «МФЧМЦ БЛАГОМЕД». Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0 text-muted">ИНН: 5036178558 | ОГРН: 1195081095087 | Лицензия: Л041-О1162-50/00652485</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Записаться на прием</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="mb-4">Выберите удобный способ связи:</p>
+                    <div class="d-grid gap-3">
+                        <a href="https://wa.me/79777515005" class="btn btn-success btn-lg" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                        </a>
+                        <a href="tel:+79777515005" class="btn btn-primary btn-lg">
+                            <i class="fas fa-phone me-2"></i>Позвонить
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
