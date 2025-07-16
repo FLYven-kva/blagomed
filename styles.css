@@ -113,6 +113,14 @@ body {
   color: var(--dark-blue);
 }
 
+.footer-contact {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: fff;
+}
+
 .hero-buttons .btn {
   margin-bottom: 1rem;
   padding: 0.75rem 2rem;
@@ -1140,5 +1148,29 @@ html {
   .quick-contact-card-modern {
     padding: 1rem 0.5rem 0.5rem 0.5rem;
     border-radius: 1rem;
+  }
+}
+
+.text-muted {
+  color: #888 !important;
+}
+
+.footer .text-muted {
+  color: #fff !important;
+}
+
+.gallery-section .carousel-inner {
+  min-height: 420px;
+}
+.gallery-section .gallery-img {
+  height: 420px;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  .gallery-section .carousel-inner {
+    min-height: 250px;
+  }
+  .gallery-section .gallery-img {
+    height: 250px;
   }
 }
