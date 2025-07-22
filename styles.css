@@ -1174,7 +1174,7 @@ html {
 }
 
 .gallery-section .carousel-inner {
-  min-height: 420px;
+  min-height: 600px;
 }
 .gallery-section .gallery-img {
   height: 420px;
@@ -1215,6 +1215,22 @@ html {
     font-weight: 600;
     font-size: 1.05rem;
 }
+#testsTable td.price-col {
+  color: var(--red-accent);
+  font-weight: 600;
+  font-size: 1.13rem;
+  text-align: right;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+#testsTable th.price-col {
+  text-align: right;
+}
+@media (max-width: 575.98px) {
+  #testsTable td.price-col {
+    font-size: 1.01rem;
+  }
+}
 @media (max-width: 575.98px) {
     .tests-table-section {
         padding: 1.5rem 0.5rem;
@@ -1253,5 +1269,11 @@ html {
     min-width: 0 !important;
     max-width: 100vw !important;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-image {
+    display: none !important;
   }
 }

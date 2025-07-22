@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function() {
             row.innerHTML = `
                 <td>${test.code}</td>
                 <td>${test.name}</td>
-                <td>${test.price}</td>
+                <td class="price-col">${test.price}</td>
             `;
             tableBody.appendChild(row);
         });
