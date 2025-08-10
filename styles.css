@@ -921,6 +921,8 @@ html {
 .discount-img {
   max-width: 320px;
   min-width: 220px;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 24px rgba(20,58,123,0.10);
   object-fit: cover;
@@ -929,7 +931,11 @@ html {
 }
 @media (max-width: 991px) {
   .discount-card { flex-direction: column; text-align: center; gap: 1.5rem; }
-  .discount-img { margin: 0 auto 1.5rem auto; }
+  .discount-img { 
+    margin: 0 auto 1.5rem auto; 
+    max-width: 100%;
+    min-width: auto;
+  }
 }
 .discount-badge {
   display: inline-block;
@@ -964,7 +970,8 @@ html {
 }
 .discount-list {
   margin-bottom: 1.1rem;
-  padding-left: 1.2em;
+  padding-left: 0;
+  list-style: none;
 }
 .discount-list li {
   font-size: 1.13rem;
@@ -1177,7 +1184,7 @@ html {
   min-height: 600px;
 }
 .gallery-section .gallery-img {
-  height: 420px;
+  height: 600px;
   object-fit: cover;
 }
 @media (max-width: 768px) {
